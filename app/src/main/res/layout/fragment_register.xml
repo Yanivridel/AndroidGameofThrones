@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:padding="16dp"
+    tools:context=".fragments.fragment_register">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Register"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Email Label -->
+    <TextView
+        android:id="@+id/email_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:gravity="start"
+        android:text="Email"
+        android:textSize="18sp" />
+
+    <!-- Email Input -->
+    <EditText
+        android:id="@+id/email_input_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+    <!-- Password Label -->
+    <TextView
+        android:id="@+id/password_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Password Input -->
+    <EditText
+        android:id="@+id/password_input_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+    <!-- Confirm Password Label -->
+    <TextView
+        android:id="@+id/confirm_password_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Confirm Password Input -->
+    <EditText
+        android:id="@+id/confirm_password_input_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Confirm your password"
+        android:inputType="textPassword"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+    <!-- Phone Label -->
+    <TextView
+        android:id="@+id/phone_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Phone"
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Phone Input -->
+    <EditText
+        android:id="@+id/phone_input_reg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your phone number"
+        android:inputType="phone"
+        android:layout_marginBottom="16dp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
+
+    <!-- Register Button -->
+    <Button
+        android:id="@+id/submit_register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/buttons_green"
+        android:text="Register" />
+
+</LinearLayout>

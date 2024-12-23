@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white"
+    tools:context=".fragments.fragment_app">
+
+    <!-- Main Title: Game of Thrones -->
+    <TextView
+        android:id="@+id/mainTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Game of Thrones"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="8dp"
+        android:padding="8dp"
+        android:background="#FFD700"
+        android:elevation="4dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Description about the show -->
+    <TextView
+        android:id="@+id/showDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Game of Thrones is a fantasy drama television series based on George R.R. Martin's A Song of Ice and Fire novels. It follows the political and dynastic struggles between noble families as they vie for control of the Iron Throne."
+        android:textSize="16sp"
+        android:textColor="#555555"
+        android:lineSpacingExtra="4dp"
+        android:layout_marginBottom="16dp"
+        android:layout_gravity="center_horizontal"/>
+
+    <!-- Subtitle: Characters -->
+    <TextView
+        android:id="@+id/charactersSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Characters"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#1A1A1A"
+        android:layout_marginBottom="8dp"
+        android:layout_gravity="center_horizontal"/>
+
+
+    <!-- The Modal Background (Black overlay) -->
+    <LinearLayout
+        android:id="@+id/modalBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- Modal Content (Big Card) -->
+        <LinearLayout
+            android:id="@+id/modalCard"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/modalImageView"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:src="@drawable/ic_launcher_background" />
+
+            <TextView
+                android:id="@+id/modalName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp" />
+
+            <TextView
+                android:id="@+id/modalFamily"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Family"
+                android:textSize="16sp"
+                android:textColor="#757575" />
+
+            <TextView
+                android:id="@+id/modalDescription"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Description"
+                android:textSize="14sp"
+                android:layout_marginTop="4dp"
+                android:textColor="#757575" />
+
+            <!-- Close Button (X) -->
+            <ImageButton
+                android:id="@+id/closeModalBtn"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:background="@android:color/transparent"
+                android:layout_gravity="end" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- Search bar above the RecyclerView -->
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search characters"
+        android:iconifiedByDefault="false" />
+
+    <!-- RecyclerView for Characters -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleViewApp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:layout_weight="1"
+        android:background="@android:color/white"/>
+
+</LinearLayout>
